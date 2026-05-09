@@ -1,0 +1,155 @@
+## Pages (48)
+- LOGIN [`Scaffold_lz13s54l`]
+  - (no incoming navigation)
+  - Navigates to: FORGET_PASSWORD, SIGNUP
+- SIGNUP [`Scaffold_8c3irycp`]
+  - (no incoming navigation)
+  - Navigates to: CLIENT_DAHSBOARD, LOGIN, WORKER_DASHBOARD
+- FORGET_PASSWORD [`Scaffold_lfz32h2s`]
+  - (no incoming navigation)
+  - Navigates to: LOGIN
+- CLIENT_DAHSBOARD [`Scaffold_mmgvol8x`]
+  - Navigates to: TICKETuser_list
+  - Queries: ticket
+- WORKER_DASHBOARD [`Scaffold_10itl99d`]
+  - Navigates to: FIRST_PAGE, TICKETuser_list
+  - Queries: ticket
+- ADMIN_PAGE [`Scaffold_2jd81oaj`]
+  - Navigates to: ticket_homepage
+- TICKET_PAGE [`Scaffold_gmmp2026`]
+  - Navigates to: TICKETuser_list, ticket_dashboard
+  - Queries: category_ticket, sub_ticket, ticket
+- WORKERCATEGORY_PAGE [`Scaffold_ki70mdvs`]
+  - Navigates to: AddWorkerCategory_page, EditWorkerCategory_page, traduction_description
+  - Queries: worker_category
+  - State: selectedTab (String)
+- WORKERPROFILE_PAGE [`Scaffold_gwcni9wg`]
+  - Navigates to: AddWorkerProfile_page, EditWorkerProfile_page, FIRST_PAGE
+  - Queries: worker_prrofile
+- FIRST_PAGE [`Scaffold_09xw0rap`] [initial]
+  - Navigates to: ADMIN_PAGE, AddWorkerProfile_page, Admin_Offers, CLIENT_DAHSBOARD, Client_Offers, ContractListPage, WORKERCATEGORY_PAGE, WORKERPROFILE_PAGE, WORKER_DASHBOARD, Worker_Offers, portfolio_items, service_client, ticket_homepage
+- ADMIN_CAT_TICKET [`Scaffold_qwhkgnlh`]
+  - Navigates to: edit_categorie, ticket_homepage
+  - Queries: category_ticket
+- service_admin [`Scaffold_hiiy60ck`]
+  - (no incoming navigation)
+- service_client [`Scaffold_xi9vfjbr`]
+  - Navigates to: service_create, service_update
+  - Queries: service
+  - State: searchquery (String), aieval (String), suggestionmin (Double), suggestionmax (Double)
+- Admin_Offers [`Scaffold_83x1by27`]
+  - Navigates to: FIRST_PAGE, Offer_Stats, editOffer
+  - Queries: offer, service, users
+- Client_Offers [`Scaffold_svyhnjdl`]
+  - Navigates to: FIRST_PAGE, Offer_Detail
+  - Queries: offer
+- Worker_Offers [`Scaffold_ws9iz9gc`]
+  - Navigates to: FIRST_PAGE, Select_Service_Request
+  - Queries: offer
+- ticket_conversation [`Scaffold_iifirvc8`]
+  - Navigates to: TICKETuser_list, ticket_dashboard
+  - Queries: sub_ticket, ticket
+  - Params: ticketToChat (DocumentReference), targetLang (String), isTranslated (Boolean), chatDocs (List<Document<?>>)
+  - State: isTranslated (Boolean), targetLang (String), chatDocs (List<Document<?>>)
+- ADMINCreateContractPage [`Scaffold_rd7ozbkb`]
+  - Navigates to: ContractListPage
+  - Queries: contract
+- ContractListPage [`Scaffold_qnz66tw7`]
+  - Navigates to: ADMINCreateContractPage, EditContractPage
+  - Queries: contract
+  - State: statusTab (String), searchText (String)
+- AddWorkerCategory_page [`Scaffold_i2dfcn8q`]
+  - Navigates to: WORKERCATEGORY_PAGE
+  - Queries: worker_category
+- AddWorkerProfile_page [`Scaffold_oh8382m8`]
+  - Navigates to: FIRST_PAGE, WORKERPROFILE_PAGE
+  - Queries: worker_prrofile
+- edit_categorie [`Scaffold_or4tj0pn`]
+  - Navigates to: ADMIN_CAT_TICKET
+  - Queries: category_ticket
+  - Params: categoryToEdit (DocumentReference)
+- EditWorkerProfile_page [`Scaffold_6aax9lbe`]
+  - Navigates to: WORKERPROFILE_PAGE
+  - Queries: worker_prrofile
+  - Params: workerDoc (DocumentReference)
+- EditWorkerCategory_page [`Scaffold_703g2hee`]
+  - Navigates to: WORKERCATEGORY_PAGE
+  - Queries: worker_category
+  - Params: workerDoc (DocumentReference)
+- EditContractPage [`Scaffold_twrxu8pe`]
+  - Navigates to: ContractListPage
+  - Queries: contract
+  - Params: contratDoc (Document<contract>)
+- ticket_dashboard [`Scaffold_7nrnizft`]
+  - Navigates to: EDITticketADMIN, ticket_conversation, ticket_homepage, ticket_stats
+  - Queries: ticket
+  - State: isSearching (Boolean), searchQuery (String), priorityFilter (String), isPriorityFilterActive (Boolean), statusFilter (String)
+- ticket_homepage [`Scaffold_ehfo2914`]
+  - Navigates to: ADMIN_CAT_TICKET, FIRST_PAGE, TICKET_PAGE, ticket_dashboard
+- service_create [`Scaffold_tpqm61sj`]
+  - Queries: service
+- addOffers [`Scaffold_dxa9r3pk`]
+  - Navigates to: Worker_Offers
+  - Queries: offer, service, users
+  - Params: targetService (DocumentReference), serviceDocument (Document<service>)
+- editOffer [`Scaffold_xkdpdy35`]
+  - Navigates to: Admin_Offers
+  - Queries: offer
+  - Params: offerDoc (Document<offer>)
+- service_update [`Scaffold_y6cu38om`]
+  - Queries: service
+  - Params: service (DocumentReference)
+- review_form [`Scaffold_832gl0qa`]
+  - Queries: portfolio_items
+  - Params: portfolio (Document<portfolio_items>)
+- portfolio_items [`Scaffold_5hbkztws`]
+  - Navigates to: chatbot, portflio_view
+  - Queries: portfolio_items
+- EDITticketADMIN [`Scaffold_yp6ehfj0`]
+  - Navigates to: ticket_dashboard
+  - Queries: category_ticket, ticket
+  - Params: ticketToEdit (DocumentReference)
+- portflio_view [`Scaffold_a0dkr6wh`]
+  - Navigates to: chatbot, portfolio_items, portfolio_update, review_form, searchportfollio
+  - Queries: portfolio_items
+- portfolio_update [`Scaffold_j1i1l90e`]
+  - Navigates to: portflio_view
+  - Queries: portfolio_items
+  - Params: portfolior (Document<portfolio_items>)
+- Select_Service_Request [`Scaffold_s4ggtiyc`] → SelectServiceRequest
+  - Navigates to: FIRST_PAGE, addOffers
+  - Queries: service
+- TICKETuser_list [`Scaffold_o58ip2z8`]
+  - Navigates to: TICKET_PAGE, WORKER_DASHBOARD, ticket_conversation
+  - Queries: sub_ticket, ticket
+  - State: ticketUserList (String)
+- Client_OffersModel [`Scaffold_59w8ejzk`] → clientOffersCopyModel
+  - (no incoming navigation)
+  - Navigates to: FIRST_PAGE
+- chatbot [`Scaffold_1xw4lk3l`]
+- traduction_description [`Scaffold_2d4et0jw`]
+  - Navigates to: WORKERCATEGORY_PAGE
+  - Queries: worker_category
+  - Params: id (DocumentReference)
+- MilestoneListPage [`Scaffold_oebn49nl`]
+  - (no incoming navigation)
+  - Queries: milestone
+- AddMilestonePage [`Scaffold_hqzq9hx0`]
+  - (no incoming navigation)
+- Offer_Detail [`Scaffold_5hlrhx70`] → offerDetail
+  - Navigates to: FIRST_PAGE
+  - Queries: offer
+  - Params: offerDetail (Document<offer>)
+- EditMilestonePage [`Scaffold_n5imxpku`]
+  - (no incoming navigation)
+- searchportfollio [`Scaffold_z3ogu5mp`]
+  - Navigates to: review_form
+  - Queries: portfolio_items
+- ticket_stats [`Scaffold_oknbbot0`]
+  - Navigates to: ticket_dashboard
+  - Queries: ticket
+- Offer_Stats [`Scaffold_9mubjgem`] → offerStats
+  - Navigates to: Admin_Offers
+  - Queries: offer
+  - Params: offer (List<Document<?>>)
+

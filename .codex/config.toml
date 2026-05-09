@@ -1,0 +1,3 @@
+[mcp_servers.flutterflow_ai]
+command = "dart"
+args = ["run", "C:\\Users\\oussa\\Desktop\\flutter_orion\\my-app\\.flutterflow/sdk/flutterflow_ai\\mcp\\server.dart", "--dir", "C:\\Users\\oussa\\Desktop\\flutter_orion\\my-app"]

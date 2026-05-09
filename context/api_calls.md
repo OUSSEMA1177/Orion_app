@@ -1,0 +1,35 @@
+## API Calls
+- myMemoryTranslate [GET] https://api.mymemory.translated.net/get?q=[text]&langpair=en|[target_lang]
+  - Variables: text (String), target_lang (String)
+- sendOfferNotification [POST] https://api.emailjs.com/api/v1.0/email/send
+  - Variables: clientName (String), serviceTitle (String), price (String), deliveryTime (String), clientEmail (String)
+  - Body: JSON
+- generateOffer [POST] https://openrouter.ai/api/v1/chat/completions
+  - Variables: serviceDescription (String)
+  - Body: JSON
+- TICKETRESPONSE [POST] https://api.groq.com/openai/v1/chat/completions
+  - Variables: title (String), descriptionv (String)
+  - Body: JSON
+- chatbot [POST] https://openrouter.ai/api/v1/chat/completions
+  - Variables: chatHistory (JSON)
+  - Body: JSON
+- traductionHAMA [POST] https://api.groq.com/openai/v1/chat/completions
+  - Variables: con (String), lang (String)
+  - Body: JSON
+- uploadpic [POST] https://freeimage.host/api/1/upload
+  - Variables: source (UploadedFile), action (String), key (String)
+- uploadpdf [POST] https://api.cloudinary.com/v1_1/dcied55gz/auto/upload
+  - Variables: file (UploadedFile), upload_preset (String)
+- mailHAMA [POST] https://api.emailjs.com/api/v1.0/email/send
+  - Variables: name (String), email (String)
+  - Body: JSON
+- EvaluatePrice [POST] https://api.groq.com/openai/v1/chat/completions
+  - Variables: title (String), description (String), budget_min (Double), budget_max (Double), level (String)
+  - Body: JSON
+- GenerateContractPdf [POST] https://api.pdfmonkey.io/api/v1/documents
+  - Variables: title (String), scope (String), price (String), currency (String), status (String), client_name (String), provider_name (String)
+  - Body: JSON
+- MailLaunchContract [POST] https://api.emailjs.com/api/v1.0/email/send
+  - Variables: to_name (String), to_email (String), contract_title (String), price (String), currency (String), start_date (String), end_date (String), status (String), pdf_url (String)
+  - Body: JSON
+

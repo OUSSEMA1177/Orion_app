@@ -1,0 +1,13 @@
+## App State (11)
+- rechhama (Boolean)
+- statusFilterOfferAdmin (String)
+- SearchOfferActive (Boolean)
+- selectedLocation (LatLng)
+- nn (String)
+- chathistory (List<JSON>)
+- texttraduit (String)
+- aieval (String)
+- suggestionmin (Double)
+- suggestionmax (Double)
+- searchactiveportfolio (Boolean)
+
